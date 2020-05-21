@@ -8,6 +8,7 @@ import { ProductsPageRoutingModule } from './products-routing.module';
 
 import { ProductsPage } from './products.page';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   imports: [
@@ -17,6 +18,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ProductsPageRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+  ],
+  providers:[
+    Camera
   ],
   declarations: [ProductsPage]
 })

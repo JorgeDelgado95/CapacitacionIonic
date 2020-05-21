@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home', //Aqui se decide la pagina que carga por default
+    redirectTo: 'login', //Aqui se decide la pagina que carga por default
     pathMatch: 'full'
   },
   {

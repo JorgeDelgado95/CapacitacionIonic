@@ -15,11 +15,14 @@ export class ListPage implements OnInit {
    }
 
    ionViewWillEnter(){
+    this.itemsService.setIsLoading(true);
     this.itemsService.getItems().subscribe(res => {
       console.log('>>>Res ', res);
       this.items = res;
+      this.itemsService.setIsLoading(false);
     }, err => {
       alert(err);
+      this.itemsService.setIsLoading(false);
     });
    }
 
